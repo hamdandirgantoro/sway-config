@@ -22,7 +22,7 @@ set $term foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $browser google-chrome
-set $menu wofi -S drun
+set $menu $(tofi-drun)
 
 include /etc/sway/config-vars.d/*
 
@@ -105,7 +105,7 @@ input "1267:228:Elan_Touchpad" {
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+q exec swaymsg exit
 #
 # Moving around:
 #
